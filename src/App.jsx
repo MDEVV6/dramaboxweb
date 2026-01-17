@@ -27,7 +27,7 @@ import Login from './pages/admin/Login';
 import Dashboard from './pages/admin/Dashboard';
 import ArticleManager from './pages/admin/ArticleManager';
 import ArticleEditor from './pages/admin/ArticleEditor';
-import SiteSettings from './pages/Admin/SiteSettings';
+import SiteSettings from './pages/admin/SiteSettings';
 import Setup from './pages/admin/Setup';
 
 function AppContent() {
