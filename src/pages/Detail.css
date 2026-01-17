@@ -1,0 +1,225 @@
+.detail-header {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+}
+
+.detail-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.detail-backdrop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(20px) brightness(0.4);
+}
+
+.backdrop-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, var(--surface-dark) 5%, transparent 100%);
+}
+
+.detail-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.poster-wrapper {
+    flex-shrink: 0;
+    width: 250px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--glass-border);
+}
+
+.poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 2/3;
+}
+
+.drama-info {
+    flex-grow: 1;
+}
+
+.drama-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.drama-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+}
+
+.tag-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.8125rem;
+    color: white;
+    border: 1px solid var(--glass-border);
+}
+
+.drama-intro {
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon-only {
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-only.saved {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+    color: var(--primary-900);
+}
+
+.icon-only.saved:hover {
+    background: #f59e0b;
+    border-color: #f59e0b;
+}
+
+/* Tabs & Content */
+.content-section {
+    padding-bottom: 6rem;
+}
+
+.tabs {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid var(--glass-border);
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: white;
+}
+
+.tab-btn.active {
+    color: var(--accent-gold);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-gold);
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 1rem;
+    margin-bottom: 8rem;
+}
+
+.episode-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background: var(--surface-card);
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.episode-btn:hover {
+    background: var(--primary-700);
+    color: white;
+    border-color: var(--primary-600);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .detail-header {
+        flex-direction: column;
+        padding-top: var(--header-height);
+        margin-bottom: 0;
+    }
+
+    .detail-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .poster-wrapper {
+        width: 160px;
+        margin-top: 2rem;
+    }
+
+    .drama-title {
+        font-size: 2rem;
+    }
+
+    .drama-meta {
+        justify-content: center;
+    }
+
+    .action-buttons {
+        justify-content: center;
+    }
+
+    .drama-intro {
+        font-size: 0.9375rem;
+        padding: 0 1rem;
+    }
+}

@@ -1,0 +1,52 @@
+.ad-slot {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.ad-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    opacity: 0.6;
+}
+
+.ad-content {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Position-specific styles */
+.ad-slot-header {
+    margin: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+.ad-slot-top {
+    margin-top: 0;
+}
+
+.ad-slot-bottom {
+    margin-bottom: 0;
+}
+
+.ad-slot-sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + 2rem);
+}
+
+@media (max-width: 768px) {
+    .ad-slot-sidebar {
+        position: relative;
+        top: 0;
+    }
+}

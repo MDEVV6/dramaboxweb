@@ -1,0 +1,119 @@
+.views-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.views-counter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.views-counter.animating::before {
+    left: 100%;
+}
+
+.views-counter.animating {
+    transform: scale(1.05);
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+.views-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--accent-gold) 0%, #f59e0b 100%);
+    border-radius: 50%;
+    color: var(--primary-900);
+    flex-shrink: 0;
+}
+
+.views-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.views-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.views-count {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.views-pulse {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: var(--accent-gold);
+    animation: pulse 0.6s ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5) translateY(-10px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .views-counter {
+        padding: 0.625rem 1rem;
+        gap: 0.625rem;
+    }
+
+    .views-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .views-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .views-label {
+        font-size: 0.7rem;
+    }
+
+    .views-count {
+        font-size: 1.25rem;
+    }
+}
+
+/* Premium glow effect */
+.views-counter:hover {
+    border-color: var(--accent-gold);
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.2);
+}

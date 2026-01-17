@@ -1,0 +1,95 @@
+/* Rich Text Editor Styles */
+.rich-text-editor {
+    background: var(--surface-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-border);
+    overflow: hidden;
+}
+
+.rich-text-editor .quill {
+    background: var(--surface-card);
+}
+
+.rich-text-editor .ql-toolbar {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1rem;
+}
+
+.rich-text-editor .ql-container {
+    border: none;
+    font-size: 1rem;
+    min-height: 400px;
+    background: var(--surface-card);
+}
+
+.rich-text-editor .ql-editor {
+    color: var(--text-primary);
+    min-height: 400px;
+    padding: 1.5rem;
+}
+
+.rich-text-editor .ql-editor.ql-blank::before {
+    color: var(--text-secondary);
+    font-style: normal;
+}
+
+/* Toolbar buttons */
+.rich-text-editor .ql-toolbar button {
+    color: var(--text-secondary);
+}
+
+.rich-text-editor .ql-toolbar button:hover {
+    color: var(--accent-gold);
+}
+
+.rich-text-editor .ql-toolbar button.ql-active {
+    color: var(--accent-gold);
+}
+
+.rich-text-editor .ql-stroke {
+    stroke: var(--text-secondary);
+}
+
+.rich-text-editor .ql-toolbar button:hover .ql-stroke {
+    stroke: var(--accent-gold);
+}
+
+.rich-text-editor .ql-toolbar button.ql-active .ql-stroke {
+    stroke: var(--accent-gold);
+}
+
+.rich-text-editor .ql-fill {
+    fill: var(--text-secondary);
+}
+
+.rich-text-editor .ql-toolbar button:hover .ql-fill {
+    fill: var(--accent-gold);
+}
+
+.rich-text-editor .ql-toolbar button.ql-active .ql-fill {
+    fill: var(--accent-gold);
+}
+
+/* Dropdowns */
+.rich-text-editor .ql-picker-label {
+    color: var(--text-secondary);
+}
+
+.rich-text-editor .ql-picker-label:hover {
+    color: var(--accent-gold);
+}
+
+.rich-text-editor .ql-picker-options {
+    background: var(--surface-card);
+    border: 1px solid var(--glass-border);
+}
+
+.rich-text-editor .ql-picker-item {
+    color: var(--text-primary);
+}
+
+.rich-text-editor .ql-picker-item:hover {
+    color: var(--accent-gold);
+}
