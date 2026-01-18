@@ -28,6 +28,7 @@ import Dashboard from './pages/admin/Dashboard';
 import ArticleManager from './pages/admin/ArticleManager';
 import ArticleEditor from './pages/admin/ArticleEditor';
 import SiteSettings from './pages/admin/SiteSettings';
+import AdminUsers from './pages/admin/AdminUsers';
 import Setup from './pages/admin/Setup';
 
 function AppContent() {
@@ -78,6 +79,7 @@ function AppContent() {
               <Route path="/admin/articles/new" element={<ArticleEditor />} />
               <Route path="/admin/articles/edit/:id" element={<ArticleEditor />} />
               <Route path="/admin/settings" element={<SiteSettings />} />
+              <Route path="/admin/users" element={<AdminUsers />} />
               <Route path="/admin/setup" element={<Setup />} />
 
               <Route path="*" element={<NotFound />} />

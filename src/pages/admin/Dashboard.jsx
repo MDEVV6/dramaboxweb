@@ -229,6 +229,13 @@ const Dashboard = () => {
                         <Settings size={20} />
                         <span>Site Settings</span>
                     </button>
+                    <button
+                        className="nav-item"
+                        onClick={() => navigate('/admin/users')}
+                    >
+                        <Users size={20} />
+                        <span>Admin Users</span>
+                    </button>
                 </nav>
 
                 <button className="logout-btn" onClick={handleLogout}>
