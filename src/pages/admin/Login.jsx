@@ -35,14 +35,15 @@ const Login = () => {
                 .single();
 
             if (queryError || !data) {
+                console.error('Query error:', queryError);
                 setError('Invalid username or password');
                 setLoading(false);
                 return;
             }
 
-            // In production, verify password hash with bcrypt
-            // For now, simple check (CHANGE THIS IN PRODUCTION!)
-            if (password === 'admin123') {
+            // Simple password check (comparing with password_hash field)
+            // Note: In production, use proper password hashing (bcrypt, argon2, etc.)
+            if (password === data.password_hash) {
                 // Update last login
                 await supabase
                     .from('admin_users')
